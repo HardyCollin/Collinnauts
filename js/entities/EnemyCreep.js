@@ -52,7 +52,7 @@ game.EnemyCreep = me.Entity.extend({
         this._super(me.Entity, "update", [delta]);
         return true;
     },
-    
+//    this allows our enemy to kill our base
     collideHandler: function(response){
         if(response.b.type==='PlayerBaseEntity'){
             this.attacking=true;

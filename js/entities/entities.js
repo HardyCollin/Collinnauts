@@ -71,7 +71,7 @@ game.PlayerEntity = me.Entity.extend({
         }
         return false;
     },
-    
+//    these allow us to check if a button is pressed and then allow our character to move in the corresponding direction
     checkKeyPressedAndMove: function(){
         if(me.input.isKeyPressed("right")){
             this.moveRight();
@@ -110,7 +110,7 @@ game.PlayerEntity = me.Entity.extend({
         this.jumping = true;
         this.body.vel.y -= this.body.accel.y * me.timer.tick;
     },
-    
+//    this lets us use some other keys for our special  abilities
     checkAbilityKey: function(){
         if(me.input.isKeyPressed("skill1")){
             //this.speedBurst();
@@ -120,7 +120,7 @@ game.PlayerEntity = me.Entity.extend({
             this.throwSpear();
         }
     },
-    
+//    this has to do with our spear throw and the timer of when we can throw it
     throwSpear: function(){
         if((this.now-this.lastSpear) >= game.data.spearTimer*1000 && game.data.ability3 > 0){
             this.lastSpear = this.now;

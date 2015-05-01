@@ -24,7 +24,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 me.game.world.addChild(spendGold, 0);
                 
                 game.data.gold = 10;
-                
+//                these allow our character to move, use abilities, and change between various screens
                 me.input.bindKey(me.input.KEY.B, "buy");
                 me.input.bindKey(me.input.KEY.Q, "skill1");
                 me.input.bindKey(me.input.KEY.W, "skill2");

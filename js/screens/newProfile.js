@@ -46,6 +46,7 @@ game.NewProfile = me.ScreenObject.extend({
                     },
                     
                     draw: function(renderer){
+//                        this adds the font for our page to register a new user
                         this.font.draw(renderer.getContext(), "PICK A USERNAME AND PASSWORD", this.pos.x, this.pos.y);
                     }
                 })));

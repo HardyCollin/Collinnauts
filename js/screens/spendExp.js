@@ -5,7 +5,7 @@ game.SpendExp = me.ScreenObject.extend({
 	 */
 	onResetEvent: function() {	
 		me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('exp-screen')), -10);
-                
+//                these allow us to press on a key and it react on the page
                 me.input.bindKey(me.input.KEY.F1, "F1");
                 me.input.bindKey(me.input.KEY.F2, "F2");
                 me.input.bindKey(me.input.KEY.F3, "F3");
@@ -46,6 +46,7 @@ game.SpendExp = me.ScreenObject.extend({
                     },
                     
                     draw: function(renderer){
+//                        this adds text to our screen
                         this.font.draw(renderer.getContext(), "PRESS F1-F4 TO BUY, F5 TO SKIP", this.pos.x, this.pos.y);
                         this.font.draw(renderer.getContext(), "CURRENT EXP: " + game.data.exp.toString(), this.pos.x + 100, this.pos.y + 50);
                         this.font.draw(renderer.getContext(), "F1: INCREASE GOLD PRODUCTION CURRENT LEVEL: " + game.data.exp1.toString() + " COST: " + exp1cost, this.pos.x, this.pos.y + 100);
@@ -81,6 +82,7 @@ game.SpendExp = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
+//            this makes it so once we're away from that screen the keys dont work for the same thing
             me.input.unbindKey(me.input.KEY.F1, "F1");
             me.input.unbindKey(me.input.KEY.F2, "F2");
             me.input.unbindKey(me.input.KEY.F3, "F3");

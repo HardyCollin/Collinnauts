@@ -1,4 +1,4 @@
-
+//this has to do with how often we get gold, how often a creep shows up
 game.GameTimerManager = Object.extend({
     init: function(x, y, settings){
         this.now = new Date().getTime();

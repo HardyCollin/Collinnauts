@@ -1,7 +1,7 @@
 
 /* Game namespace */
 var game = {
-
+//These different values are for speed, health, timers and attack for our players, bases and enemies
 	// an object where to store game information
 	data : {
 		// score
@@ -80,6 +80,7 @@ var game = {
 
 	// Run on game resources loaded.
 	"loaded" : function () {
+//            these are too load the files that allow our player and enemies to do anything
                 me.pool.register("player", game.PlayerEntity, true);
                 me.pool.register("PlayerBase", game.PlayerBaseEntity);
                 me.pool.register("EnemyBase", game.EnemyBaseEntity);
@@ -89,7 +90,7 @@ var game = {
                 me.pool.register("ExperienceManager", game.ExperienceManager);
                 me.pool.register("SpendGold", game.SpendGold);
                 me.pool.register("spear", game.SpearThrow);
-            
+//            These load our different screens that have to do with actually having the game show up
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
                 me.state.set(me.state.SPENDEXP, new game.SpendExp());

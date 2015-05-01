@@ -1,4 +1,4 @@
-
+//this keeps track of experience and also tells us when we win or lose
 game.ExperienceManager = Object.extend({
     init: function(x, y, settings) {
         this.alwaysUpdate = true;

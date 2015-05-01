@@ -1,4 +1,4 @@
-
+//This allows us to die
 game.HeroDeathManager =  Object.extend({
     init: function(x, y, settings){
         this.alwaysUpdate = true;

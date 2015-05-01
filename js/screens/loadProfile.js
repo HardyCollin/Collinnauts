@@ -46,6 +46,7 @@ game.LoadProfile = me.ScreenObject.extend({
                     },
                     
                     draw: function(renderer){
+//                        this draws the text for our pagge to load a previous users account
                         this.font.draw(renderer.getContext(), "ENTER YOUR USERNAME AND PASSWORD", this.pos.x, this.pos.y);
                     }
                 })));
